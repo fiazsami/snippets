@@ -1,0 +1,305 @@
+{
+	"jq-ready": {
+		"prefix": "jq-ready",
+		"body": [
+			"$(document).ready(function() {",
+			"    $0",
+			"});"
+		]
+	},
+	"jq-ajax": {
+		"prefix": "jq-ajax",
+		"body": [
+			"$.ajax({",
+			"\ttype: \"${method}\",",
+			"\turl: \"${url}\",",
+			"\tdata: ${data},",
+			"\tsuccess: function (response) {",
+			"\t\t$0",
+			"\t}",
+			"});"
+		]
+	},
+	"sel-attribute": {
+		"prefix": "sel-attribute",
+		"body": [
+			"$(\"${1:}\").attr($0);"
+		]
+	},
+	"sel-children": {
+		"prefix": "sel-children",
+		"body": [
+			"$(\"${1:}\").children();"
+		]
+	},
+	"sel-siblings": {
+		"prefix": "sel-siblings",
+		"body": [
+			"$(\"${1:}\").siblings();"
+		]
+	},
+	"sel-closest": {
+		"prefix": "sel-closest",
+		"body": [
+			"$(\"${1:}\").closest();"
+		]
+	},
+	"sel-find": {
+		"prefix": "sel-find",
+		"body": [
+			"$(\"${1:}\").find();"
+		]
+	},
+	"sel-next": {
+		"prefix": "sel-next",
+		"body": [
+			"$(\"${1:}\").next();"
+		]
+	},
+	"sel-nextall": {
+		"prefix": "sel-nextall",
+		"body": [
+			"$(\"${1:}\").nextAll();"
+		]
+	},
+	"sel-parent": {
+		"prefix": "sel-parent",
+		"body": [
+			"$(\"${1:}\").parent();"
+		]
+	},
+	"sel-parents": {
+		"prefix": "sel-parents",
+		"body": [
+			"$(\"${1:}\").parents();"
+		]
+	},
+	"sel-prev": {
+		"prefix": "sel-prev",
+		"body": [
+			"$(\"${1:}\").prev();"
+		]
+	},
+	"sel-prevall": {
+		"prefix": "sel-prevall",
+		"body": [
+			"$(\"${1:}\").prevAll();"
+		]
+	},
+	"fx-delay": {
+		"prefix": "sel-delay",
+		"body": [
+			"$(\"${1:}\").delay(${2:});"
+		]
+	},
+	"fx-delay-fn": {
+		"prefix": "fx-delay-fn",
+		"body": [
+			"$(\"${1:}\").delay(${2:}, function() {$0});"
+		]
+	},
+	"fx-hide": {
+		"prefix": "fx-hide",
+		"body": [
+			"$(\"${1:}\").hide(${2:});"
+		]
+	},
+	"fx-hide-fn": {
+		"prefix": "fx-hide-fn",
+		"body": [
+			"$(\"${1:}\").hide(${2:}, function() {$0});"
+		]
+	},
+	"fx-show": {
+		"prefix": "fx-show",
+		"body": [
+			"$(\"${1:}\").show(${2:});"
+		]
+	},
+	"fx-show-fn": {
+		"prefix": "fx-show-fn",
+		"body": [
+			"$(\"${1:}\").show(${2:}, function() {$0});"
+		]
+	},
+	"fx-slideup": {
+		"prefix": "fx-slideup",
+		"body": [
+			"$(\"${1:}\").slideUp(${2:});"
+		]
+	},
+	"fx-slideup-fn": {
+		"prefix": "fx-slideup-fn",
+		"body": [
+			"$(\"${1:}\").slideUp(${2:}, function() {$0});"
+		]
+	},
+	"fx-slidedown": {
+		"prefix": "fx-slidedown",
+		"body": [
+			"$(\"${1:}\").slideDown(${2:});"
+		]
+	},
+	"fx-slidedown-fn": {
+		"prefix": "fx-slidedown-fn",
+		"body": [
+			"$(\"${1:}\").slideDown(${2:}, function() {$0});"
+		]
+	},
+	"fx-fadein": {
+		"prefix": "fx-fadein",
+		"body": [
+			"$(\"${1:}\").fadeIn(${2:});"
+		]
+	},
+	"fx-fadein-fn": {
+		"prefix": "fx-fadein-fn",
+		"body": [
+			"$(\"${1:}\").fadeIn(${2:}, function() {$0});"
+		]
+	},
+	"fx-fadeout": {
+		"prefix": "fx-fadeout",
+		"body": [
+			"$(\"${1:}\").fadeOut(${2:});"
+		]
+	},
+	"fx-fadeout-fn": {
+		"prefix": "fx-fadeout-fn",
+		"body": [
+			"$(\"${1:}\").fadeOut(${2:}, function() {$0});"
+		]
+	},
+	"fx-fadeto": {
+		"prefix": "fx-fadeto",
+		"body": [
+			"$(\"${1:}\").fadeTo(${2:});"
+		]
+	},
+	"fx-fadeto-fn": {
+		"prefix": "fx-fadeto-fn",
+		"body": [
+			"$(\"${1:}\").fadeTo(${2:}, function() {$0});"
+		]
+	},
+	"fx-toggle": {
+		"prefix": "fx-toggle",
+		"body": [
+			"$(\"${1:}\").toggle(${2:});"
+		]
+	},
+	"fx-toggle-fn": {
+		"prefix": "fx-toggle-fn",
+		"body": [
+			"$(\"${1:}\").toggle(${2:}, function() {$0});"
+		]
+	},
+	"fx-fadetoggle": {
+		"prefix": "fx-fadetoggle",
+		"body": [
+			"$(\"${1:}\").fadeToggle(${2:});"
+		]
+	},
+	"fx-fadetoggle-fn": {
+		"prefix": "fx-fadetoggle-fn",
+		"body": [
+			"$(\"${1:}\").fadeToggle(${2:}, function() {$0});"
+		]
+	},
+	"fx-slidetoggle": {
+		"prefix": "fx-slidetoggle",
+		"body": [
+			"$(\"${1:}\").slideToggle(${2:});"
+		]
+	},
+	"fx-slidetoggle-fn": {
+		"prefix": "fx-slidetoggle-fn",
+		"body": [
+			"$(\"${1:}\").slideToggle(${2:}, function() {$0});"
+		]
+	},
+	"at-click-fn": {
+		"prefix": "at-click-fn",
+		"body": [
+			"$(\"${1:}\").click(function(event) {$0});"
+		]
+	},
+	"at-dblclick-fn": {
+		"prefix": "at-dblclick-fn",
+		"body": [
+			"$(\"${1:}\").dblclick(function(event) {$0});"
+		]
+	},
+	"at-mouseenter-fn": {
+		"prefix": "at-mouseenter-fn",
+		"body": [
+			"$(\"${1:}\").mouseenter(function(event) {$0});"
+		]
+	},
+	"at-mouseleave-fn": {
+		"prefix": "at-mouseleave-fn",
+		"body": [
+			"$(\"${1:}\").mouseleave(function(event) {$0});"
+		]
+	},
+	"at-keypress-fn": {
+		"prefix": "at-keypress-fn",
+		"body": [
+			"$(\"${1:}\").keypress(function(event) {$0});"
+		]
+	},
+	"at-keydown-fn": {
+		"prefix": "at-keydown-fn",
+		"body": [
+			"$(\"${1:}\").keydown(function(event) {$0});"
+		]
+	},
+	"at-keyup-fn": {
+		"prefix": "at-keyup-fn",
+		"body": [
+			"$(\"${1:}\").keyup(function(event) {$0});"
+		]
+	},
+	"at-submit-fn": {
+		"prefix": "at-submit-fn",
+		"body": [
+			"$(\"${1:}\").submit(function(event) {$0});"
+		]
+	},
+	"at-focus-fn": {
+		"prefix": "at-focus-fn",
+		"body": [
+			"$(\"${1:}\").focus(function(event) {$0});"
+		]
+	},
+	"at-blur-fn": {
+		"prefix": "at-blur-fn",
+		"body": [
+			"$(\"${1:}\").blur(function(event) {$0});"
+		]
+	},
+	"at-load-fn": {
+		"prefix": "at-load-fn",
+		"body": [
+			"$(window).load(function(event) {$0});"
+		]
+	},
+	"at-resize-fn": {
+		"prefix": "at-resize-fn",
+		"body": [
+			"$(window).resize(function(event) {$0});"
+		]
+	},
+	"at-scroll-fn": {
+		"prefix": "at-scroll-fn",
+		"body": [
+			"$(window).scroll(function(event) {$0});"
+		]
+	},
+	"at-unload-fn": {
+		"prefix": "at-unload-fn",
+		"body": [
+			"$(window).unload(function(event) {$0});"
+		]
+	},
+}

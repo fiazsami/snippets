@@ -1,0 +1,97 @@
+{
+	"Django Model": {
+		"prefix": "dj-model",
+		"body": [
+			"class ${1:}(models.Model):",
+			"    ${2:}",
+			"",
+			"    created_at = models.DateTimeField(auto_now_add=True)",
+			"    updated_at = models.DateTimeField(auto_now=True)"
+		]
+		
+	},
+	"Django URLs": {
+		"prefix": "dj-urls",
+		"body": [
+			"from django.urls import path",
+			"from . import views",
+			"",
+			"app_name = '${1:}'",
+			"",
+			"urlpatterns = [",
+			"    ${2:}",
+			"]"
+		]
+		
+	},
+	"Django Path": {
+		"prefix": "dj-path",
+		"body": [
+			"path('${1:}', views.${2:}, name='${2:}'),"
+		]
+		
+	},
+	"Django Include": {
+		"prefix": "dj-include",
+		"body": [
+			"path('${1:}', include('apps.${2:}.urls', namespace='${2:}')),"
+		]
+		
+	},
+
+	"Django Render": {
+		"prefix": "dj-render",
+		"body": [
+			"return render(request, '${1:}/${2:}.html'${3:})"
+		]
+		
+	},
+
+	"Django Redirect": {
+		"prefix": "dj-redirect",
+		"body": [
+			"return redirect('${1:}:${2:}'${3:})"
+		]
+		
+	},
+	"Django Main Routing": {
+		"prefix": "dj-routing",
+		"body": [
+			"from django.urls import path",
+			"",
+			"from channels.http import AsgiHandler",
+			"from channels.routing import ProtocolTypeRouter, URLRouter",
+			"from channels.auth import AuthMiddlewareStack",
+			"",
+			"application = ProtocolTypeRouter({",
+			"    'websocket': AuthMiddlewareStack(",
+			"        URLRouter(apps.${1:app_name}.urlpatterns),",
+			"    ),",
+			"",
+			"})"
+		]
+		
+	},
+
+	"Django Consumer": {
+		"prefix": "dj-consumer-json",
+		"body": [
+			"import json",
+			"from django.conf import settings",
+			"from channels.generic.websocket import JsonWebsocketConsumer",
+			"",
+			"class ${1:<ConsumerName>}(JsonWebsocketConsumer):",
+			"",
+			"    def connect(self):",
+			"        pass",
+			"",
+			"    def receive_json(self, content):",
+			"        pass",
+			"",
+			"    def disconnect(self, close_code):",
+			"        pass",
+			"",
+		]
+		
+	},
+}
